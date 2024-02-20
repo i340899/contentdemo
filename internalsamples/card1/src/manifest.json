@@ -1,0 +1,74 @@
+
+{
+	"_version": "1.18.0",
+	"sap.app": {
+		"id": "sap.workzone.cpkg.card1.sample",
+		"type": "card",
+		"i18n": "i18n/i18n.properties",
+		"title": "{{TITLE}}",
+		"subTitle": "{{SUBTITLE}}",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"shortTitle": "{{SHORTTITLE}}",
+		"info": "{{INFO}}",
+		"description": "{{DESCRIPTION}}",
+		"tags": {
+			"keywords": [
+				"{{KEYWORD1}}"
+			]
+		}
+	},
+	"sap.card": {
+		"type": "List",
+		"designtime": "dt/configuration",
+		"configuration": {
+			"parameters": {
+				"string": {
+					"value": "StringValue"
+				},
+				"boolean": {
+					"value": false
+				},
+				"integer": {
+					"value": 1
+				},
+				"date": {
+					"value": "2020-09-02"
+				}
+			},
+			"destinations": {
+				"s4hanart": {
+					"name": "s4hanart",
+					"defaultUrl": "/sap/opu/odata/sap/IWBEP/GWSAMPLE_BASIC/"
+				}
+			}
+		},
+		"data": {
+			"request": {
+				"url": "{{destinations.s4hanart}}/sap/opu/odata/IWBEP/GWSAMPLE_BASIC/ProductSet",
+				"withCredentials": true
+			},
+			"path": "/d/results"
+		},
+		"header": {
+			"title": "GWSAMPLE_BASIC",
+			"subTitle": "Products",
+			"icon": {
+				"src": "sap-icon://product"
+			}
+		},
+		"content": {
+            "item": {
+                "title": "{Name}",
+                "description": "{Description}",
+                "info": {
+                    "value": "{Price}",
+                    "state": "{= ${Price} > 5 ? 'Success' : 'Warning' }"
+                }
+            },
+            "maxItems": 10
+        }
+
+	}
+}

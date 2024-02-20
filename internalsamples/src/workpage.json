@@ -1,0 +1,58 @@
+{
+  "_version": "3.2.0",
+  "identification": {
+    "id": "my.company.ns.contentpackage.workpage",
+    "entityType": "workpage"
+  },
+  "payload": {
+    "workpageConfig": {
+      "title": "My Workpage"
+    },
+    "rows": [
+      {
+        "id": "row-1",
+        "rowConfig": {},
+        "columns": [
+          {
+            "id": "col-11",
+            "columnConfig": {},
+            "cells": [
+              {
+                "id": "cell-111",
+                "cellConfig": {},
+                "widgets": [
+                  {
+                    "id": "widg-1111",
+                    "viz": {
+                      "appId": "sap.workzone.cpkg.card.sample.app",
+                      "vizId": "sap.workzone.cpkg.card.sample.viz"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "col-12",
+            "columnConfig": {},
+            "cells": [
+              {
+                "id": "cell-121",
+                "cellConfig": {},
+                "widgets": [
+                  {
+                    "id": "widg-1211",
+                    "viz": {
+                      "appId": "sap.workzone.cpkg.card1.sample.app",
+                      "vizId": "sap.workzone.cpkg.card1.sample.viz"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
